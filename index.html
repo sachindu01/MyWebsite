@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Hosted Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Hosted Web Page!</h1>
+    <p>This is a simple page you can host using GitHub Pages.</p>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+    
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText = "Hello! You have successfully hosted your page.";
+        }
+    </script>
+</body>
+</html>
