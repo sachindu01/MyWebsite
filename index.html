@@ -1,53 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Hosted Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-image: url('assets/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        h1 {
-            color: #f1c40f;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        #message {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
+    <link href="assets/main.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Welcome to My Hosted Web Page!</h1>
-    <p>This is a simple page you can host using GitHub Pages.</p>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="message"></p>
-    
-    <script>
-        function showMessage() {
-            const messages = ["Hello! You have successfully hosted your page.", "Welcome to the web!", "You're doing great! Keep it up!", "Enjoy learning web development!"];
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            document.getElementById("message").innerText = randomMessage;
-        }
-    </script>
+
+<body class="index-page">
+
+    <!-- Header Section -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/logo.png" alt="">
+                <h1 class="sitename">PlantPulse</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html#hero" class="active">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#more-features">Our Impact</a></li>
+                    <li><a href="index.html#testimonials">Our Team</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a class="btn-getstarted" href="index.html#about">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="hero-bg">
+            <img src="assets/hero.jpg" alt="">
+        </div>
+        <div class="container text-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h1>Welcome to <span>PlantPulse</span></h1>
+                <p>Revolutionizing Agriculture</p>
+                <img src="assets/img/hero.jpg" class="img-fluid hero-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 content">
+                    <p class="who-we-are">Who We Are</p>
+                    <h3>Revolutionizing Agriculture</h3>
+                    <p class="fst-italic">Sustainable Growth, Simplified. Embrace the power of innovation with our system that empowers you to grow healthy, high-quality produce with minimal environmental impact.</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Sustainable Practices</li>
+                        <li><i class="bi bi-check-circle"></i> Innovative Technology</li>
+                        <li><i class="bi bi-check-circle"></i> Support for Farmers</li>
+                    </ul>
+                    <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-6 about-images">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <img src="assets/tabs-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row gy-4">
+                                <div class="col-lg-12">
+                                    <img src="assets/services.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-lg-12">
+                                    <img src="assets/tabs-3.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+        <div class="container section-title">
+            <h2>Features</h2>
+            <p>Features Our System Offers</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5 d-flex align-items-center">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active show">
+                                <i class="bi bi-binoculars"></i>
+                                <div>
+                                    <h4 class="d-none d-lg-block">Automated Delivery System</h4>
+                                    <p>Nutrient and Water are delivered to the plants automatically by the system</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="bi bi-box-seam"></i>
+                                <div>
+                                    <h4 class="d-none d-lg-block">Remote Functionality</h4>
+                                    <p>Allowing remote monitoring and controlling via IOT-based sensors and controllers</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="bi bi-brightness-high"></i>
+                                <div>
+                                    <h4 class="d-none d-lg-block">Dedicated Mobile Application</h4>
+                                    <p>Monitor and control the whole system through your fingertips</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show">
+                            <img src="assets/tabs-1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="tab-pane fade">
+                            <img src="assets/tabs-2.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="tab-pane fade">
+                            <img src="assets/tabs-3.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Our Team</h2>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper init-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="profile mt-auto">
+                                <img src="assets/testimonials-1.jpg" class="testimonial-img" alt="">
+                                <h3>Tharusha Haththella</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="profile mt-auto">
+                                <img src="assets/testimonials-2.jpg" class="testimonial-img" alt="">
+                                <h3>Sachindu Premasiri</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="profile mt-auto">
+                                <img src="assets/testimonials-3.jpg" class="testimonial-img" alt="">
+                                <h3>Nimesha Somathilaka</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="profile mt-auto">
+                                <img src="assets/testimonials-4.jpg" class="testimonial-img" alt="">
+                                <h3>Devin Hasnaka</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container section-title text-center" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>We are here to assist you. Reach out to us through the following contact methods, and we'll be happy to help you with any questions or inquiries.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone"></i>
+                        <h3>Call Us</h3>
+                        <p>+94 81 222 3232</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>contact@plantpulse.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-geo-alt"></i>
+                        <h3>Location</h3>
+                        <p>Colombo, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
